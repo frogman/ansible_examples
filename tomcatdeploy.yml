@@ -42,7 +42,7 @@
            name: "deploy_user"
            comment: "Used to deploy Tomcat"
            state: present
-      - name: Create .ssh folder
+      - name: Create .ssh folder for the user deploy
         file:
           path: "/home/deploy_user/.ssh/"
           state: directory
