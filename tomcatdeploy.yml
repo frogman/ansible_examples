@@ -1,5 +1,6 @@
 ---
-- hosts: clouderanodes
+- name: tomcatdeploy-playbook-name
+  hosts: clouderanodes
 
   tasks:
 
@@ -16,6 +17,7 @@
       - name: ensure a list of Tomcat packages installed
         yum:
           name: "{{ packages }}"
+          state: latest
         vars:
           packages:
             - tomcat-webapps
